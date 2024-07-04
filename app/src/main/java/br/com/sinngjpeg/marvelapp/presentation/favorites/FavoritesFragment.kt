@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.sinngjpeg.marvelapp.databinding.FragmentFavoriteBinding
 
-class FavoriteFragment : Fragment() {
+class FavoritesFragment : Fragment() {
     private lateinit var binding: FragmentFavoriteBinding
 
     override fun onCreateView(
