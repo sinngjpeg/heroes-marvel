@@ -1,7 +1,7 @@
 package br.com.sinngjpeg.marvelapp.framework.di
 
-import androidx.viewbinding.BuildConfig
 import br.com.jpegsinng.core.data.network.intercerptor.AuthorizationInterceptor
+import br.com.sinngjpeg.marvelapp.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
