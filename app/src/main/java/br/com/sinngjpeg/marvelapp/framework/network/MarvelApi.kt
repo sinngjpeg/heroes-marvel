@@ -1,6 +1,6 @@
-package br.com.jpegsinng.core.data.network
+package br.com.sinngjpeg.marvelapp.framework.network
 
-import br.com.jpegsinng.core.data.network.response.DataWrapperResponse
+import br.com.sinngjpeg.marvelapp.framework.network.response.DataWrapperResponse
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 

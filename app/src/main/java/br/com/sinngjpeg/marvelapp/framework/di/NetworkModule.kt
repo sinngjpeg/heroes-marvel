@@ -1,6 +1,6 @@
 package br.com.sinngjpeg.marvelapp.framework.di
 
-import br.com.jpegsinng.core.data.network.intercerptor.AuthorizationInterceptor
+import br.com.sinngjpeg.marvelapp.framework.network.intercerptor.AuthorizationInterceptor
 import br.com.sinngjpeg.marvelapp.BuildConfig
 import dagger.Module
 import dagger.Provides

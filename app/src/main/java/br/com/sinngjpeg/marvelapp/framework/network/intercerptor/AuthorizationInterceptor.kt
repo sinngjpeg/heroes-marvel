@@ -1,4 +1,4 @@
-package br.com.jpegsinng.core.data.network.intercerptor
+package br.com.sinngjpeg.marvelapp.framework.network.intercerptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

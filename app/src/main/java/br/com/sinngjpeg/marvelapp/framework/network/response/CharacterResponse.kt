@@ -1,4 +1,4 @@
-package br.com.jpegsinng.core.data.network.response
+package br.com.sinngjpeg.marvelapp.framework.network.response
 
 data class CharacterResponse(
     val id: String,
