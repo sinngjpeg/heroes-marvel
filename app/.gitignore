@@ -80,6 +80,7 @@ proguard/
 *.ipr
 *~
 *.swp
+apikey.properties
 
 # Keystore files
 

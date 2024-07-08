@@ -18,6 +18,7 @@ apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 android {
     namespace 'br.com.sinngjpeg.marvelapp'
     compileSdk 34
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "br.com.sinngjpeg.marvelapp"
