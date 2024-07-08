@@ -1,7 +1,8 @@
 package br.com.sinngjpeg.marvelapp.framework.di
 
-import br.com.sinngjpeg.marvelapp.framework.network.intercerptor.AuthorizationInterceptor
 import br.com.sinngjpeg.marvelapp.BuildConfig
+import br.com.sinngjpeg.marvelapp.framework.network.MarvelApi
+import br.com.sinngjpeg.marvelapp.framework.network.intercerptor.AuthorizationInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,11 +58,13 @@ object NetworkModule {
     fun provideRetrofit(
         okHttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory,
-    ): Retrofit =
-        Retrofit
+    ): MarvelApi {
+       return Retrofit
             .Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()
+            .create(MarvelApi::class.java)
+    }
 }
