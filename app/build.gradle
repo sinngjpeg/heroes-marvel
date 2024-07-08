@@ -28,7 +28,7 @@ android {
 
         buildConfigField("String", "PUBLIC_KEY", apikeyProperties['PUBLIC_KEY'])
         buildConfigField("String", "PRIVATE_KEY", apikeyProperties['PRIVATE_KEY'])
-        buildConfigField("String", "BASE_URL", '"https://gateway.marvel.com/v1/public"')
+        buildConfigField("String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"')
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -76,7 +76,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // Navigation
-    def nav_version = '2.4.0'
+    def nav_version = '2.7.7'
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 

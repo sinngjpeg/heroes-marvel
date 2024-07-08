@@ -4,8 +4,9 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import br.com.jpegsinng.core.domain.model.Character
+import javax.inject.Inject
 
-class CharactersAdapter : PagingDataAdapter<Character, CharactersViewHolder>(diffCallback) {
+class CharactersAdapter @Inject constructor(): PagingDataAdapter<Character, CharactersViewHolder>(diffCallback) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
