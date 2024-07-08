@@ -22,7 +22,7 @@ class HomeLoadStateViewHolder(
 
     fun bind(loadState: LoadState) {
         progressBarLoading.isVisible = loadState is LoadState.Loading
-        textTryAgain.isVisible = loadState !is LoadState.Error
+        textTryAgain.isVisible = loadState is LoadState.Error
     }
 
     companion object {
