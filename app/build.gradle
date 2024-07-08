@@ -68,6 +68,7 @@ dependencies {
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     testImplementation project(':testing')
+    androidTestImplementation project(':testing')
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     // Glide
