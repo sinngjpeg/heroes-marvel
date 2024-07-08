@@ -2,6 +2,10 @@
     <string name="app_name">heroesmarvelapp</string>
     <string name="menu_home">Home</string>
     <string name="menu_favorites">Favorites</string>
+    <string name="error_try_again">Try Again</string>
+    <string name="error_next_page_try_again">An error occurred while attempting to load the next page. Please try again.
+</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_load_heroes">Encountering a problem while attempting to load heroes</string>
 </resources>
