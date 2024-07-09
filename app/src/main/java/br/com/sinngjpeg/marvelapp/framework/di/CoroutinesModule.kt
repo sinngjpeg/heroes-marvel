@@ -13,8 +13,8 @@ object CoroutinesModule {
 
     @Provides
     fun provideDispatchers() = AppCoroutinesDispatchers(
-        Dispatchers.IO,
-        Dispatchers.Default,
-        Dispatchers.Main,
-    )
+            Dispatchers.IO,
+            Dispatchers.Default,
+            Dispatchers.Main,
+        )
 }

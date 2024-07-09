@@ -13,5 +13,4 @@ interface AppModule {
 
     @Binds
     fun bindImageLoader(imageLoader: GlideImageLoader): ImageLoader
-
 }

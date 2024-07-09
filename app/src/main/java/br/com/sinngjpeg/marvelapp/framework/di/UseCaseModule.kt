@@ -14,13 +14,8 @@ import dagger.hilt.android.components.ViewModelComponent
 interface UseCaseModule {
 
     @Binds
-    fun bindsCharactersUseCase(
-        useCase: GetCharactersUseCaseImpl
-    ): GetCharactersUseCase
+    fun bindsCharactersUseCase(useCase: GetCharactersUseCaseImpl): GetCharactersUseCase
 
     @Binds
-    fun bindGetComicsUseCase(
-        useCase: GetCharacterCategoriesUseCaseImpl
-    ): GetCharacterCategoriesUseCase
-
+    fun bindGetComicsUseCase(useCase: GetCharacterCategoriesUseCaseImpl): GetCharacterCategoriesUseCase
 }

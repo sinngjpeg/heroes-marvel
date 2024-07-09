@@ -14,12 +14,8 @@ import dagger.hilt.components.SingletonComponent
 interface RepositoryModule {
 
     @Binds
-    fun bindCharacterRepository(
-        repositoryImpl: CharactersRepositoryImpl
-    ): CharactersRepository
+    fun bindCharacterRepository(repositoryImpl: CharactersRepositoryImpl): CharactersRepository
 
     @Binds
-    fun bindRemoteDataSource(
-        dataSource: RetrofitCharactersDataSource
-    ): CharactersRemoteDataSource
+    fun bindRemoteDataSource(dataSource: RetrofitCharactersDataSource): CharactersRemoteDataSource
 }
