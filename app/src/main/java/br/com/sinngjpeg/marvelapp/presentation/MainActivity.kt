@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNavHostFragment(navHostFragment: NavHostFragment) {
         navController = navHostFragment.navController
-        binding.bottomNavMain.setupWithNavController(navController)
+//        binding.bottomNavMain.setupWithNavController(navController)
         appBarConfiguration =
             AppBarConfiguration(
                 setOf(
