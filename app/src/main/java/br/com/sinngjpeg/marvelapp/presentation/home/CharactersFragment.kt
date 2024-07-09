@@ -10,11 +10,17 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import br.com.sinngjpeg.marvelapp.databinding.FragmentCharactersBinding
+import br.com.sinngjpeg.marvelapp.framework.imageloader.ImageLoader
+import br.com.sinngjpeg.marvelapp.presentation.detail.DetailViewArg
+import br.com.sinngjpeg.marvelapp.presentation.home.CharactersFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class CharactersFragment : Fragment() {
@@ -22,6 +28,9 @@ class CharactersFragment : Fragment() {
     private val binding: FragmentCharactersBinding get() = _binding!!
 
     private val viewModel: CharactersViewModel by viewModels()
+
+    @Inject
+    lateinit var imageLoader: ImageLoader
 
     private lateinit var charactersAdapter: CharactersAdapter
 
@@ -53,7 +62,22 @@ class CharactersFragment : Fragment() {
     }
 
     private fun initCharactersAdapter() {
-        charactersAdapter = CharactersAdapter()
+        charactersAdapter = CharactersAdapter(imageLoader) {
+            val extras = FragmentNavigatorExtras(
+                view to character.name
+            )
+            val directions =
+                br.com.sinngjpeg.marvelapp.presentation.home.CharactersFragmentDirections
+                    .actionCharactersFragmentToDetailFragment(
+                        character.name,
+                        DetailViewArg(
+                            name = character.name,
+                            imageUrl = character.imageUrl
+                        )
+                    )
+            findNavController().navigate(directions, extras)
+        }
+
         with(binding.recyclerCharacters) {
             scrollToPosition(0)
             setHasFixedSize(true)
