@@ -18,49 +18,53 @@ import java.util.concurrent.TimeUnit
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
+    private const val TIMEOUT_SECONDS = 15L
+
     @Provides
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor =
-        HttpLoggingInterceptor().apply {
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().apply {
             setLevel(
                 if (BuildConfig.DEBUG) {
                     HttpLoggingInterceptor.Level.BODY
-                } else {
-                    HttpLoggingInterceptor.Level.NONE
-                },
+                } else HttpLoggingInterceptor.Level.NONE
             )
         }
+    }
 
     @Provides
-    fun provideAuthorizationInterceptor(): AuthorizationInterceptor =
-        AuthorizationInterceptor(
+    fun provideAuthorizationInterceptor(): AuthorizationInterceptor {
+        return AuthorizationInterceptor(
             publicKey = BuildConfig.PUBLIC_KEY,
             privateKey = BuildConfig.PRIVATE_KEY,
-            calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC")),
+            calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
         )
+    }
 
     @Provides
-    fun provideOkhttpClient(
+    fun provideOkHttpClient(
         loggingInterceptor: HttpLoggingInterceptor,
-        authorizationInterceptor: AuthorizationInterceptor,
-    ): OkHttpClient =
-        OkHttpClient
-            .Builder()
+        authorizationInterceptor: AuthorizationInterceptor
+    ): OkHttpClient {
+        return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .readTimeout(15, TimeUnit.SECONDS)
             .addInterceptor(authorizationInterceptor)
-            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
+            .connectTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
             .build()
+    }
 
     @Provides
-    fun providesGsonConverterFactor(): GsonConverterFactory = GsonConverterFactory.create()
+    fun provideGsonConverterFactory(): GsonConverterFactory {
+        return GsonConverterFactory.create()
+    }
 
     @Provides
-    fun provideRetrofit(
+    fun providesRetrofit(
         okHttpClient: OkHttpClient,
-        converterFactory: GsonConverterFactory,
+        converterFactory: GsonConverterFactory
     ): MarvelApi {
-       return Retrofit
-            .Builder()
+        return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
