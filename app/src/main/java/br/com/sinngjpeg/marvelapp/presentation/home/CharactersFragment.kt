@@ -11,15 +11,15 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.paging.LoadState
-import br.com.sinngjpeg.marvelapp.databinding.FragmentHomeBinding
+import br.com.sinngjpeg.marvelapp.databinding.FragmentCharactersBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
-    private val binding: FragmentHomeBinding get() = _binding!!
+class CharactersFragment : Fragment() {
+    private var _binding: FragmentCharactersBinding? = null
+    private val binding: FragmentCharactersBinding get() = _binding!!
 
     private val viewModel: CharactersViewModel by viewModels()
 
@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ) = FragmentHomeBinding
+    ) = FragmentCharactersBinding
         .inflate(inflater, container, false)
         .apply {
             _binding = this
@@ -58,7 +58,7 @@ class HomeFragment : Fragment() {
             scrollToPosition(0)
             setHasFixedSize(true)
             adapter = charactersAdapter.withLoadStateFooter(
-                    footer = HomeLoadStateAdapter(
+                    footer = CharactersLoadStateAdapter(
                         charactersAdapter::retry
                     )
                 )

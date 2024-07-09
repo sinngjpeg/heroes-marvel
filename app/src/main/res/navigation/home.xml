@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.com.sinngjpeg.marvelapp.presentation.home.HomeFragment"
+        android:name="br.com.sinngjpeg.marvelapp.presentation.home.CharactersFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_characters" />
 </navigation>

@@ -4,16 +4,16 @@ import android.view.ViewGroup
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 
-class HomeLoadStateAdapter(
+class CharactersLoadStateAdapter(
     private val retry: () -> Unit,
-) : LoadStateAdapter<HomeLoadStateViewHolder>() {
+) : LoadStateAdapter<CharactersLoadStateViewHolder>() {
     override fun onBindViewHolder(
-        holder: HomeLoadStateViewHolder,
+        holder: CharactersLoadStateViewHolder,
         loadState: LoadState,
     ) = holder.bind(loadState)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         loadState: LoadState,
-    ): HomeLoadStateViewHolder = HomeLoadStateViewHolder.create(parent, retry)
+    ): CharactersLoadStateViewHolder = CharactersLoadStateViewHolder.create(parent, retry)
 }
