@@ -9,13 +9,13 @@ import br.com.sinngjpeg.marvelapp.framework.imageloader.ImageLoader
 import br.com.sinngjpeg.marvelapp.utils.OnCharacterItemClick
 
 class CharactersViewHolder(
-    itemCharacterBinding: ItemCharacterBinding,
+    itemCharactersBinding: ItemCharacterBinding,
     private val imageLoader: ImageLoader,
     private val onItemClick: OnCharacterItemClick
-) : RecyclerView.ViewHolder(itemCharacterBinding.root) {
+) : RecyclerView.ViewHolder(itemCharactersBinding.root) {
 
-    private val textName = itemCharacterBinding.textName
-    private val imageCharacter = itemCharacterBinding.imageCharacter
+    private val textName = itemCharactersBinding.textName
+    private val imageCharacter = itemCharactersBinding.imageCharacter
 
     fun bind(character: Character) {
         textName.text = character.name
@@ -25,19 +25,17 @@ class CharactersViewHolder(
         itemView.setOnClickListener {
             onItemClick.invoke(character, imageCharacter)
         }
-
     }
 
-    companion object{
+    companion object {
         fun create(
             parent: ViewGroup,
             imageLoader: ImageLoader,
             onItemClick: OnCharacterItemClick
-        ): CharactersViewHolder{
-            val inflater  = LayoutInflater.from(parent.context)
-            val itemCharacterBinding = ItemCharacterBinding.inflate(inflater, parent, false)
-            return CharactersViewHolder(itemCharacterBinding, imageLoader, onItemClick)
+        ): CharactersViewHolder {
+            val inflater = LayoutInflater.from(parent.context)
+            val itemBinding = ItemCharacterBinding.inflate(inflater, parent, false)
+            return CharactersViewHolder(itemBinding, imageLoader, onItemClick)
         }
     }
-
 }
