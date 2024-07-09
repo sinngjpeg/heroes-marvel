@@ -2,14 +2,14 @@
 <ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/flipper_home"
+    android:id="@+id/flipper_characters"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.home.CharactersFragment">
 
     <include
-        android:id="@+id/view_home_loading_state"
-        layout="@layout/view_characters_loading_state" />
+        android:id="@+id/include_view_characters_loading_state"
+        layout="@layout/include_view_characters_loading_state" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_characters"
@@ -20,6 +20,7 @@
         tools:listitem="@layout/item_character" />
 
     <include
-        android:id="@+id/view_home_error_state"
-        layout="@layout/view_characters_error_state" />
+        android:id="@+id/include_view_characters_error_state"
+        layout="@layout/include_error_view" />
+
 </ViewFlipper>
