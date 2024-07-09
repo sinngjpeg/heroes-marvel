@@ -1,5 +1,7 @@
 package br.com.sinngjpeg.marvelapp.framework.di
 
+import br.com.jpegsinng.core.usecase.GetCharacterCategoriesUseCase
+import br.com.jpegsinng.core.usecase.GetCharacterCategoriesUseCaseImpl
 import br.com.jpegsinng.core.usecase.GetCharactersUseCase
 import br.com.jpegsinng.core.usecase.GetCharactersUseCaseImpl
 import dagger.Binds
@@ -10,6 +12,15 @@ import dagger.hilt.android.components.ViewModelComponent
 @Module
 @InstallIn(ViewModelComponent::class)
 interface UseCaseModule {
+
     @Binds
-    fun bindCharactersUseCase(useCase: GetCharactersUseCaseImpl): GetCharactersUseCase
+    fun bindsCharactersUseCase(
+        useCase: GetCharactersUseCaseImpl
+    ): GetCharactersUseCase
+
+    @Binds
+    fun bindGetComicsUseCase(
+        useCase: GetCharacterCategoriesUseCaseImpl
+    ): GetCharacterCategoriesUseCase
+
 }

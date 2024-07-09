@@ -1,7 +1,7 @@
 package br.com.sinngjpeg.marvelapp.framework.network.response
 
-data class DataContainerResponse(
+data class DataContainerResponse<T>(
     val offset: Int,
     val total: Int,
-    val results: List<CharacterResponse>
+    val results: List<T>
 )

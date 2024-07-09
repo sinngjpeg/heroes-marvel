@@ -7,19 +7,22 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import br.com.jpegsinng.core.domain.model.Character
 import br.com.jpegsinng.core.usecase.GetCharactersUseCase
-import br.com.jpegsinng.core.usecase.GetCharactersUseCaseImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
 class CharactersViewModel @Inject constructor(
-        private val getCharactersUseCase: GetCharactersUseCase
+    private val getCharacterUseCase: GetCharactersUseCase
 ) : ViewModel() {
-        fun charactersPagingData(query: String): Flow<PagingData<Character>> =
-            getCharactersUseCase(
-                GetCharactersUseCase.GetCharactersParams(query, getPageConfig()),
-            ).cachedIn(viewModelScope)
 
-        private fun getPageConfig() = PagingConfig(pageSize = 20)
+    fun charactersPagingData(query: String): Flow<PagingData<Character>> {
+        return getCharacterUseCase.invoke(
+            GetCharactersUseCase.GetCharacterParams(query, getPageConfig())
+        ).cachedIn(viewModelScope)
     }
+
+    private fun getPageConfig() = PagingConfig(
+        pageSize = 20
+    )
+}
