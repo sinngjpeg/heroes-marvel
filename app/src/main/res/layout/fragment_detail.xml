@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.detail.DetailFragment">
+
+    <ImageView
+        android:id="@+id/image_character"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:text="O Homem-Aranha é um dos super-heróis mais populares e icônicos do mundo. Ele é um jovem comum que foi picado por uma aranha radioativa e ganhou poderes incríveis. Ele usa seus poderes para combater o crime e proteger os inocentes. O Homem-Aranha é conhecido por sua inteligência, humor e senso de responsabilidade. Ele é um símbolo de esperança e inspiração para pessoas de todas as idades. "
+        android:layout_width="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/image_character"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
