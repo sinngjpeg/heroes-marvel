@@ -2,10 +2,11 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
+    id ("androidx.navigation.safeargs")
 }
 
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs"
+//apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-parcelize'
 
@@ -55,10 +56,11 @@ android {
 dependencies {
 
     implementation project(':core')
+    implementation project(":testing")
 
     // Androidx
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
 
@@ -77,11 +79,11 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$glide_version"
 
     // Material
-    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Navigation
-    def nav_version = '2.7.7'
+    def nav_version = '2.5.2'
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
