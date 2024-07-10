@@ -72,7 +72,7 @@
             android:alpha="0.5"
             android:padding="@dimen/dimen_padding_16dp"
             android:text="@string/common_no_results_found"
-            app:drawableTopCompat="@drawable/ic_neutral" />
+            app:drawableTopCompat="@drawable/ic_error" />
 
     </ViewFlipper>
 </androidx.constraintlayout.widget.ConstraintLayout>

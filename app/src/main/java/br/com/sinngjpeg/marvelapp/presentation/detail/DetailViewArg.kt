@@ -8,5 +8,5 @@ data class DetailViewArg(
     val characterId: Int,
     val name: String,
     val description: String,
-    val imageUrl: String
+    val imageUrl: String,
 ) : Parcelable

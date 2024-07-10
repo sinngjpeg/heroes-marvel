@@ -4,11 +4,11 @@ import androidx.annotation.StringRes
 
 data class DetailChildVE(
     val id: Int,
-    val imageUrl: String
+    val imageUrl: String,
 )
 
 data class DetailParentVE(
     @StringRes
     val categoryStringResId: Int,
-    val detailChildList: List<DetailChildVE> = listOf()
+    val detailChildList: List<DetailChildVE> = listOf(),
 )

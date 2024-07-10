@@ -8,7 +8,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.QueryMap
 
-
 interface MarvelApi {
 
     @GET("characters")
@@ -28,5 +27,4 @@ interface MarvelApi {
         @Path("characterId")
         charactersId: Int
     ): DataWrapperResponse<EventResponse>
-
 }

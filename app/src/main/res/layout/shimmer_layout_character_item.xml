@@ -30,6 +30,7 @@
             android:layout_marginStart="@dimen/margin_24dp"
             android:layout_marginEnd="@dimen/dimen_margin_12dp"
             android:ellipsize="end"
+            android:textSize="@dimen/text_large"
             android:importantForAccessibility="no"
             android:background="@color/medium_grey"
             android:maxLines="1"

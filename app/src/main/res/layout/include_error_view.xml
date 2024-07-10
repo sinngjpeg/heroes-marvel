@@ -11,15 +11,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_dimen_16dp"
+        android:importantForAccessibility="yes"
+        android:textColor="@color/black_800"
         android:text="@string/error_loading_data"
         android:textAlignment="center"
-        android:textSize="@dimen/dimen_text_32_sp"
-        app:drawableTopCompat="@drawable/ic_neutral" />
+        android:textSize="@dimen/text_medium"
+        app:drawableTopCompat="@drawable/ic_error" />
 
     <Button
         android:id="@+id/button_retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/common_try_again" />
-
 </LinearLayout>

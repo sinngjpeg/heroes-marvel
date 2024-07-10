@@ -11,6 +11,7 @@ class AuthorizationInterceptor(
     private val privateKey: String,
     private val calendar: Calendar,
 ) : Interceptor {
+
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val requestUrl = request.url
