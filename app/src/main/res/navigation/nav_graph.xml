@@ -4,6 +4,6 @@
     app:startDestination="@id/home"
     android:id="@+id/nav_graph">
 
-    <include app:graph="@navigation/home" />
+    <include app:graph="@navigation/characters" />
     <include app:graph="@navigation/favorites" />
 </navigation>

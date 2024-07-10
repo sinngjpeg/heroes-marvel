@@ -8,7 +8,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import br.com.sinngjpeg.marvelapp.R
 import br.com.sinngjpeg.marvelapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -31,11 +33,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNavHostFragment(navHostFragment: NavHostFragment) {
         navController = navHostFragment.navController
-        binding.bottomNavMain.setupWithNavController(navController)
+//        binding.bottomNavMain.setupWithNavController(navController)
         appBarConfiguration =
             AppBarConfiguration(
                 setOf(
-                    R.id.homeFragment,
+                    R.id.charactersFragment,
                     R.id.favoritesFragment,
                 ),
             )

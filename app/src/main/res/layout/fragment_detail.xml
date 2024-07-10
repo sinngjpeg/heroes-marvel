@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.detail.DetailFragment">
+
+    <ImageView
+        android:id="@+id/image_character"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_height"
+        android:scaleType="fitXY"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="0dp"
+        android:padding="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="yes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="textStart"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_margin_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_character"
+        tools:text="O Homem-Aranha é um dos super-heróis mais populares e icônicos do mundo. Ele é um jovem comum que foi picado por uma aranha radioativa e ganhou poderes incríveis. Ele usa seus poderes para combater o crime e proteger os inocentes. O Homem-Aranha é conhecido por sua inteligência, humor e senso de responsabilidade. Ele é um símbolo de esperança e inspiração para pessoas de todas as idades."/>
+
+    <ViewFlipper
+        android:id="@+id/flipper_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_description">
+
+        <include layout="@layout/include_view_detail_loading_state" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_parent_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_padding_16dp"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_parent_detail" />
+
+        <include
+            android:id="@+id/include_error_view"
+            layout="@layout/include_error_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            android:padding="@dimen/dimen_padding_16dp"
+            android:text="@string/common_no_results_found"
+            app:drawableTopCompat="@drawable/ic_error" />
+
+    </ViewFlipper>
+</androidx.constraintlayout.widget.ConstraintLayout>
