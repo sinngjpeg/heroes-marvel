@@ -8,7 +8,6 @@ Aplicativo Android que permite aos usuários explorar informações sobre super-
 
 - **Lista de Heróis**: Exibir uma lista de heróis da Marvel com imagens e nomes.
 - **Detalhes do Herói**: Ao clicar em um herói na lista, exibir detalhes como descrição e lista de quadrinhos onde o herói aparece.
-- **Busca de Heróis**: Implementar uma funcionalidade de busca para que os usuários possam encontrar heróis específicos pelo nome.
 - **Integração com API da Marvel**: Consumir endpoints da API pública da Marvel para obter informações sobre heróis, quadrinhos, séries, etc. 
 - **Testes Unitários**: Implementar testes unitários para as partes críticas do aplicativo, utilizando frameworks como JUnit e Mockito para testes de lógica e mocks.
 
@@ -82,7 +81,7 @@ Para baixar e configurar o JDK 11 diretamente no Android Studio, siga os passos 
 1. Para garantir que o Android Studio está usando o JDK correto, vá até `File` -> `Settings` (ou `Android Studio` -> `Preferences` no macOS) -> `Build, Execution, Deployment` -> `Build Tools` -> `Gradle`.
 2. Certifique-se de que a opção `Gradle JDK` está definida para o JDK 11 que você acabou de instalar.
 
-Seguindo esses passos, você terá o JDK 11 configurado corretamente no Android Studio, pronto para rodar seu projeto.
+Seguindo esses passos, você terá o JDK 11 configurado corretamente no Android Studio, pronto para rodar o projeto.
 
 ## Links Uteis
 
