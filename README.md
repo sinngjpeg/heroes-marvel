@@ -10,24 +10,22 @@ Aplicativo Android que permite aos usuários explorar informações sobre super-
 - **Detalhes do Herói**: Ao clicar em um herói na lista, exibir detalhes como descrição e lista de quadrinhos onde o herói aparece.
 - **Busca de Heróis**: Implementar uma funcionalidade de busca para que os usuários possam encontrar heróis específicos pelo nome.
 - **Integração com API da Marvel**: Consumir endpoints da API pública da Marvel para obter informações sobre heróis, quadrinhos, séries, etc. 
-- **UI/UX Atraente**: Design responsivo e agradável, seguindo as diretrizes de Material Design. Experiência de usuário intuitiva e fluida na navegação entre telas e na interação com os dados.
 - **Testes Unitários**: Implementar testes unitários para as partes críticas do aplicativo, utilizando frameworks como JUnit e Mockito para testes de lógica e mocks.
 
 ## Tecnologias Utilizadas
 
 - **Linguagem de Programação**: Kotlin
-- **Arquitetura**: MVVM (Model-View-ViewModel) para separação clara de responsabilidades e facilitar testes.
+- **Arquitetura**: Clean Architecture e MVVM (Model-View-ViewModel) para separação clara de responsabilidades e facilitar testes.
 - **Bibliotecas e Frameworks**:
   - Retrofit para comunicação com a API.
   - Coroutines para operações assíncronas.
   - Glide para carregamento e exibição de imagens.
-  - Room para armazenamento local de dados.
   - Mockito e JUnit para testes unitários.
-  - RecyclerView e RecyclerViewAdapter para exibição de listas.
+  - Pagging3, RecyclerView e RecyclerViewAdapter para exibição de listas.
 
 ## Executando o Projeto
 
-## Configuração da API da Marvel
+### Configuração da API da Marvel
 
 Para utilizar a API da Marvel nesse projeto Android, você precisa configurar suas chaves API no arquivo `local.properties`. Este arquivo é utilizado para armazenar informações confidenciais que não devem ser armazenadas no código-fonte, como as chaves da API.
 
@@ -56,17 +54,44 @@ PRIVATE_KEY="{PRIVATE_KEY}"
 O projeto precisa ser configurado com o JDK 11. 
 
 Configurar o JDK 11 no Android Studio
-Abra o Android Studio.
-No menu principal, clique em File -> Project Structure.
-Na janela que abrir, selecione SDK Location no painel esquerdo.
-No campo JDK location, clique em ... para abrir o seletor de diretórios.
-Navegue até o diretório onde você instalou o JDK 11. No Windows, o caminho típico pode ser C:\Program Files\Java\jdk-11, enquanto no macOS e Linux pode ser algo como /Library/Java/JavaVirtualMachines/jdk-11/Contents/Home ou /usr/lib/jvm/java-11-openjdk-amd64/.
-Selecione a pasta correspondente ao JDK 11 e clique em OK.
-Clique em Apply e depois em OK para salvar as configurações.
-Passo 3: Verificar a Configuração
-Ainda no Android Studio, vá até File -> Project Structure novamente.
-Na seção SDK Location, confirme que o caminho do JDK location está apontando para o diretório do JDK 11.
-Para garantir que o Android Studio está usando o JDK correto, você pode também verificar a versão do JDK em File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle. Certifique-se de que a opção Gradle JDK está definida para o JDK 11.
-Seguindo esses passos, você terá o JDK 11 configurado corretamente para rodar seu projeto no Android Studio.
+
+Para baixar e configurar o JDK 11 diretamente no Android Studio, siga os passos abaixo:
+
+#### 1: Abrir Configurações do Android Studio
+
+1. Abra o Android Studio.
+2. No menu principal, clique em `File` -> `Project Structure`.
+
+#### 2: Configurar o JDK
+
+1. Na janela `Project Structure`, selecione `SDK Location` no painel esquerdo.
+2. No campo `JDK location`, clique em `Download JDK`.
+
+#### 3: Baixar o JDK 11
+
+1. Na janela que se abrir, selecione `JDK version` e escolha a versão `11` na lista.
+2. Clique em `Download` para iniciar o download e a instalação do JDK 11.
+
+#### 4: Confirmar a Instalação
+
+1. Após o download e a instalação, o campo `JDK location` será preenchido automaticamente com o caminho do JDK 11 recém-instalado.
+2. Clique em `Apply` e depois em `OK` para salvar as configurações.
+
+#### 5: Verificar a Configuração
+
+1. Para garantir que o Android Studio está usando o JDK correto, vá até `File` -> `Settings` (ou `Android Studio` -> `Preferences` no macOS) -> `Build, Execution, Deployment` -> `Build Tools` -> `Gradle`.
+2. Certifique-se de que a opção `Gradle JDK` está definida para o JDK 11 que você acabou de instalar.
+
+Seguindo esses passos, você terá o JDK 11 configurado corretamente no Android Studio, pronto para rodar seu projeto.
 
 ## Links Uteis
+
+- [https://medium.com/nerd-for-tech/nested-recyclerview-in-android-e5afb2b9771a]
+- [https://developer.android.com/build/dependencies]
+- [https://square.github.io/retrofit/]
+- [https://munstein.medium.com/primeiros-passos-com-detekt-10416fc90638]
+- [https://guides.codepath.com/android/Storing-Secret-Keys-in-Android]
+- [https://www.toptal.com/developers/gitignore/api/android,androidstudio]
+- [https://developer.android.com/training/dependency-injection]
+- [https://developer.android.com/guide/navigation/principles]
+- [https://medium.com/@cardosof.gui/clean-architecture-e-mvvm-no-desenvolvimento-android-6f542d0f2e99]
