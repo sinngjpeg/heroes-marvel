@@ -31,18 +31,18 @@ Aplicativo Android que permite aos usuários explorar informações sobre super-
 
 Para utilizar a API da Marvel nesse projeto Android, você precisa configurar suas chaves API no arquivo `local.properties`. Este arquivo é utilizado para armazenar informações confidenciais que não devem ser armazenadas no código-fonte, como as chaves da API.
 
-#### 1. Obtenha suas chaves da API Marvel
+##### 1. Obtenha suas chaves da API Marvel
 
 - Crie uma conta no [Marvel Developer Portal](https://developer.marvel.com/) caso ainda não tenha uma.
 - Após se registrar, acesse a seção "Minha API Keys" e gere um novo par de chaves API (pública e privada).
 - Guarde suas chaves API em um local seguro, pois elas são confidenciais e não devem ser compartilhadas com ninguém.
 
-#### 2. Crie o arquivo `local.properties`
+##### 2. Crie o arquivo `local.properties`
 
 - Se o arquivo `local.properties` não existir em seu diretório raiz do projeto, crie-o manualmente.
 - Certifique-se de que o arquivo não seja incluído no controle de versão do seu projeto, pois ele contém informações confidenciais.
 
-#### 3. Adicione as chaves da API ao `local.properties`
+##### 3. Adicione as chaves da API ao `local.properties`
 
 - Abra o arquivo `local.properties`.
 - Adicione as seguintes linhas, substituindo `{PUBLIC_KEY}` pela sua chave pública da API Marvel e `{PRIVATE_KEY}` pela sua chave privada da API Marvel:
@@ -51,4 +51,22 @@ Para utilizar a API da Marvel nesse projeto Android, você precisa configurar su
 PUBLIC_KEY="{PUBLIC_KEY}"
 PRIVATE_KEY="{PRIVATE_KEY}"
 ```
+## Configuração do JDK 11
+
+O projeto precisa ser configurado com o JDK 11. 
+
+Configurar o JDK 11 no Android Studio
+Abra o Android Studio.
+No menu principal, clique em File -> Project Structure.
+Na janela que abrir, selecione SDK Location no painel esquerdo.
+No campo JDK location, clique em ... para abrir o seletor de diretórios.
+Navegue até o diretório onde você instalou o JDK 11. No Windows, o caminho típico pode ser C:\Program Files\Java\jdk-11, enquanto no macOS e Linux pode ser algo como /Library/Java/JavaVirtualMachines/jdk-11/Contents/Home ou /usr/lib/jvm/java-11-openjdk-amd64/.
+Selecione a pasta correspondente ao JDK 11 e clique em OK.
+Clique em Apply e depois em OK para salvar as configurações.
+Passo 3: Verificar a Configuração
+Ainda no Android Studio, vá até File -> Project Structure novamente.
+Na seção SDK Location, confirme que o caminho do JDK location está apontando para o diretório do JDK 11.
+Para garantir que o Android Studio está usando o JDK correto, você pode também verificar a versão do JDK em File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle. Certifique-se de que a opção Gradle JDK está definida para o JDK 11.
+Seguindo esses passos, você terá o JDK 11 configurado corretamente para rodar seu projeto no Android Studio.
+
 ## Links Uteis
