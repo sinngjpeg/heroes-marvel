@@ -11,7 +11,7 @@ apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-parcelize'
 
 
-def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyPropertiesFile = rootProject.file("local.properties")
 def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
@@ -128,7 +128,6 @@ dependencies {
     // Dependência para o Mockito core
     testImplementation 'org.mockito:mockito-core:3.12.4'
 
-    // Dependência para o Mockito Android (se estiver testando código Android)
     androidTestImplementation 'org.mockito:mockito-android:3.12.4'
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
 
