@@ -25,4 +25,29 @@ Aplicativo Android que permite aos usuários explorar informações sobre super-
   - Mockito e JUnit para testes unitários.
   - RecyclerView e RecyclerViewAdapter para exibição de listas.
 
+## Executando o Projeto
+
+## Configuração da API da Marvel
+
+Para utilizar a API da Marvel nesse projeto Android, você precisa configurar suas chaves API no arquivo `local.properties`. Este arquivo é utilizado para armazenar informações confidenciais que não devem ser armazenadas no código-fonte, como as chaves da API.
+
+#### 1. Obtenha suas chaves da API Marvel
+
+- Crie uma conta no [Marvel Developer Portal](https://developer.marvel.com/) caso ainda não tenha uma.
+- Após se registrar, acesse a seção "Minha API Keys" e gere um novo par de chaves API (pública e privada).
+- Guarde suas chaves API em um local seguro, pois elas são confidenciais e não devem ser compartilhadas com ninguém.
+
+#### 2. Crie o arquivo `local.properties`
+
+- Se o arquivo `local.properties` não existir em seu diretório raiz do projeto, crie-o manualmente.
+- Certifique-se de que o arquivo não seja incluído no controle de versão do seu projeto, pois ele contém informações confidenciais.
+
+#### 3. Adicione as chaves da API ao `local.properties`
+
+- Abra o arquivo `local.properties`.
+- Adicione as seguintes linhas, substituindo `{PUBLIC_KEY}` pela sua chave pública da API Marvel e `{PRIVATE_KEY}` pela sua chave privada da API Marvel:
+
+```plaintext
+PUBLIC_KEY="{PUBLIC_KEY}"
+PRIVATE_KEY="{PRIVATE_KEY}"
 
