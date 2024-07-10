@@ -7,7 +7,7 @@ Aplicativo Android que permite aos usuários explorar informações sobre super-
 ## Funcionalidades Principais
 
 - **Lista de Heróis**: Exibir uma lista de heróis da Marvel com imagens e nomes.
-- **Detalhes do Herói**: Ao clicar em um herói na lista, exibir detalhes como descrição, informações pessoais (nome real, altura, peso, etc.), e lista de quadrinhos onde o herói aparece.
+- **Detalhes do Herói**: Ao clicar em um herói na lista, exibir detalhes como descrição e lista de quadrinhos onde o herói aparece.
 - **Busca de Heróis**: Implementar uma funcionalidade de busca para que os usuários possam encontrar heróis específicos pelo nome.
 - **Integração com API da Marvel**: Consumir endpoints da API pública da Marvel para obter informações sobre heróis, quadrinhos, séries, etc. 
 - **UI/UX Atraente**: Design responsivo e agradável, seguindo as diretrizes de Material Design. Experiência de usuário intuitiva e fluida na navegação entre telas e na interação com os dados.
@@ -50,4 +50,5 @@ Para utilizar a API da Marvel nesse projeto Android, você precisa configurar su
 ```plaintext
 PUBLIC_KEY="{PUBLIC_KEY}"
 PRIVATE_KEY="{PRIVATE_KEY}"
-
+```
+## Links Uteis
