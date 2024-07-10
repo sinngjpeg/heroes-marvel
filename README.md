@@ -95,3 +95,4 @@ Seguindo esses passos, você terá o JDK 11 configurado corretamente no Android 
 - [https://developer.android.com/training/dependency-injection]
 - [https://developer.android.com/guide/navigation/principles]
 - [https://medium.com/@cardosof.gui/clean-architecture-e-mvvm-no-desenvolvimento-android-6f542d0f2e99]
+- [https://developer.android.com/guide/fragments/fragmentmanager]
