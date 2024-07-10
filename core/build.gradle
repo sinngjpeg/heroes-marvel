@@ -1,0 +1,38 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    // OkHttp
+    def okhttp_version = "4.9.0"
+    api(platform("com.squareup.okhttp3:okhttp-bom:$okhttp_version"))
+    api("com.squareup.okhttp3:okhttp")
+    api("com.squareup.okhttp3:logging-interceptor")
+
+    // Retrofit
+    def retrofit_version = '2.9.0'
+    api "com.squareup.retrofit2:retrofit:$retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Paging3 Common
+    def paging_version = "3.0.1"
+    implementation "androidx.paging:paging-common:$paging_version"
+
+    // Java Inject
+    implementation "javax.inject:javax.inject:1"
+
+    // Coroutines Core
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Test
+    testImplementation project(":testing")
+}

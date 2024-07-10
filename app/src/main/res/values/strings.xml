@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">MarvelApp</string>
+    <!-- App Name -->
+    <string name="app_name">Marvel Heroes</string>
+
+    <!-- App Menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <!-- Characters   -->
+    <string name="characters_screen_title">Characters</string>
+
+    <!-- Favorites   -->
+    <string name="favorites_screen_title">Favorites</string>
+    <string name="favorites_no_characters_in_the_list">No heroes in the favorite list</string>
+
+    <!-- Detail   -->
+    <string name="details_comics_category">Comics</string>
+    <string name="details_events_category">Events</string>
+
+    <!-- Error Message   -->
+    <string name="common_no_internet_connection">No internet connection</string>
+    <string name="common_try_again">Try again</string>
+    <string name="error_loading_more_try_again">An error occurred while attempting to load the next page. Please try again.</string>
+    <string name="error_loading_data">Error when trying to load data</string>
+    <string name="common_no_results_found">No results found</string>
+    <string name="error_load_heroes">Encountering a problem while attempting to load heroes</string>
+
 </resources>
