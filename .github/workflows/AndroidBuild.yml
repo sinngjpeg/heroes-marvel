@@ -1,9 +1,9 @@
 name: AndroidBuild
 on:
   pull_request:
-    branches: [ main, dev, feature/* ]
+    branches: [ main, develop, feature/* ]
   push:
-    branches: [ main, dev, feature/* ]
+    branches: [ main, develop, feature/* ]
 
 jobs:
   build:
@@ -17,12 +17,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+          cache: 'gradle'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew build
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
+        if: success()
         with:
-          name: MarvelApp.apk
+          name: android-ci-cd.apk
           path: app/build/outputs/apk/app-debug.apk
