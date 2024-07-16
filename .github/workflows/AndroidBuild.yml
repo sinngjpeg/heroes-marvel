@@ -8,6 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        api-level: [ 29, 30, 31, 32, 33, 34 ]
+        target: [ app, core, testing ]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
@@ -23,7 +29,10 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew ${{ matrix.target }}:assembleDebug
+
+      - name: Run unit tests
+        run: ./gradlew ${{ matrix.target }}:testDebugUnitTest
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
