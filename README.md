@@ -48,38 +48,7 @@ Para utilizar a API da Marvel nesse projeto Android, você precisa configurar su
 PUBLIC_KEY="{PUBLIC_KEY}"
 PRIVATE_KEY="{PRIVATE_KEY}"
 ```
-## Configuração do JDK 11
 
-O projeto precisa ser configurado com o JDK 11. 
-
-Configurar o JDK 11 no Android Studio
-
-Para baixar e configurar o JDK 11 diretamente no Android Studio, siga os passos abaixo:
-
-#### 1: Abrir Configurações do Android Studio
-
-1. Abra o Android Studio.
-2. No menu principal, clique em `File` -> `Project Structure`.
-
-#### 2: Configurar o JDK
-
-1. Na janela `Project Structure`, selecione `SDK Location` no painel esquerdo.
-2. No campo `JDK location`, clique em `Download JDK`.
-
-#### 3: Baixar o JDK 11
-
-1. Na janela que se abrir, selecione `JDK version` e escolha a versão `11` na lista.
-2. Clique em `Download` para iniciar o download e a instalação do JDK 11.
-
-#### 4: Confirmar a Instalação
-
-1. Após o download e a instalação, o campo `JDK location` será preenchido automaticamente com o caminho do JDK 11 recém-instalado.
-2. Clique em `Apply` e depois em `OK` para salvar as configurações.
-
-#### 5: Verificar a Configuração
-
-1. Para garantir que o Android Studio está usando o JDK correto, vá até `File` -> `Settings` (ou `Android Studio` -> `Preferences` no macOS) -> `Build, Execution, Deployment` -> `Build Tools` -> `Gradle`.
-2. Certifique-se de que a opção `Gradle JDK` está definida para o JDK 11 que você acabou de instalar.
 
 Seguindo esses passos, você terá o JDK 11 configurado corretamente no Android Studio, pronto para rodar o projeto.
 
